@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Olive &amp; Ember — Mediterranean Kitchen</title>
+  <meta name="description" content="Olive &amp; Ember is a demo Mediterranean restaurant: mezze, charcoal-grilled fish and handmade pasta served in a candlelit room. Sample content for a layout preview.">
+  <meta name="theme-color" content="#3B4A2F">
+  <meta name="author" content="REPLACE WITH AUTHOR">
+  <link rel="canonical" href="https://REPLACE-WITH-DOMAIN.example/">
+
+  <meta property="og:type" content="restaurant.restaurant">
+  <meta property="og:title" content="Olive &amp; Ember — Mediterranean Kitchen">
+  <meta property="og:description" content="Wood-fired Mediterranean cooking in a candlelit dining room. Mezze, charcoal-grilled fish and handmade pasta.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=80">
+  <meta property="og:image:alt" content="Candlelit dining room at Olive &amp; Ember">
+  <meta property="og:locale" content="en">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Olive &amp; Ember — Mediterranean Kitchen">
+  <meta name="twitter:description" content="Wood-fired Mediterranean cooking in a candlelit dining room.">
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=1200&amp;h=630&amp;q=80">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%233B4A2F'/%3E%3Cpath d='M5 19 Q 16 12, 27 19' fill='none' stroke='%23B8934A' stroke-width='1.2'/%3E%3Cellipse cx='10' cy='15' rx='2.6' ry='1.4' transform='rotate(-28 10 15)' fill='%23B8934A'/%3E%3Cellipse cx='16' cy='13.6' rx='2.6' ry='1.4' transform='rotate(-10 16 13.6)' fill='%23B8934A'/%3E%3Cellipse cx='22' cy='15' rx='2.6' ry='1.4' transform='rotate(-22 22 15)' fill='%23B8934A'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;family=Jost:wght@400;500&amp;display=swap">
+  <script>
+    (function () {
+      var d = document.documentElement;
+      try {
+        if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+          d.classList.add("motion");
+          if (!sessionStorage.getItem("oe-intro")) d.classList.add("intro");
+        }
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="loader" id="loader" aria-hidden="true">
+    <svg class="loader__branch" viewBox="0 0 44 22" width="96" height="48" fill="none" focusable="false">
+      <path class="loader__stem" d="M3 11 Q 22 4, 41 11" stroke="currentColor" stroke-width="1" stroke-linecap="round" fill="none"/>
+      <ellipse class="loader__leaf" style="--i:0" cx="12" cy="5.5" rx="3.6" ry="1.9" transform="rotate(-28 12 5.5)" fill="currentColor"/>
+      <ellipse class="loader__leaf" style="--i:1" cx="22" cy="5" rx="3.6" ry="1.9" transform="rotate(-10 22 5)" fill="currentColor"/>
+      <ellipse class="loader__leaf" style="--i:2" cx="32" cy="6" rx="3.6" ry="1.9" transform="rotate(-22 32 6)" fill="currentColor"/>
+      <ellipse class="loader__leaf" style="--i:3" cx="17" cy="16" rx="3.6" ry="1.9" transform="rotate(28 17 16)" fill="currentColor"/>
+      <ellipse class="loader__leaf" style="--i:4" cx="27" cy="16.5" rx="3.6" ry="1.9" transform="rotate(20 27 16.5)" fill="currentColor"/>
+      <ellipse class="loader__leaf" style="--i:5" cx="37" cy="15" rx="3.6" ry="1.9" transform="rotate(30 37 15)" fill="currentColor"/>
+    </svg>
+    <p class="loader__word">Olive &amp; Ember</p>
+    <span class="loader__bar"><i></i></span>
+  </div>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" id="site-header">
+
+    <div class="header-info" id="header-info">
+      <div class="container header-info__inner">
+        <p class="header-info__item">Open daily 12:00 to 23:00</p>
+        <p class="header-info__item header-info__item--right">
+          <a href="tel:+920000000000">+92 000 000 0000</a>
+          <span class="header-info__sep" aria-hidden="true">·</span>
+          <a href="mailto:hello@oliveandember.example">hello@oliveandember.example</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container header-main__inner">
+
+        <div class="header-main__side header-main__side--left">
+          <nav class="header-nav header-nav--left" aria-label="Primary">
+            <ul class="header-nav__list">
+              <li><a class="header-nav__link" href="#menu">Menu</a></li>
+              <li><a class="header-nav__link" href="#signature">Signature</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <a class="logo" href="#home" aria-label="Olive &amp; Ember — home">
+          <svg class="logo__branch" viewBox="0 0 44 22" width="34" height="17" fill="none" aria-hidden="true" focusable="false">
+            <path d="M3 11 Q 22 4, 41 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+            <ellipse cx="12" cy="5.5" rx="3.6" ry="1.9" transform="rotate(-28 12 5.5)" fill="currentColor"/>
+            <ellipse cx="22" cy="5"   rx="3.6" ry="1.9" transform="rotate(-10 22 5)"   fill="currentColor"/>
+            <ellipse cx="32" cy="6"   rx="3.6" ry="1.9" transform="rotate(-22 32 6)"   fill="currentColor"/>
+            <ellipse cx="17" cy="16"  rx="3.6" ry="1.9" transform="rotate(28 17 16)"   fill="currentColor"/>
+            <ellipse cx="27" cy="16.5" rx="3.6" ry="1.9" transform="rotate(20 27 16.5)" fill="currentColor"/>
+            <ellipse cx="37" cy="15"  rx="3.6" ry="1.9" transform="rotate(30 37 15)"   fill="currentColor"/>
+          </svg>
+          <span class="logo__word">Olive &amp; Ember</span>
+          <span class="logo__tag">Mediterranean Kitchen</span>
+        </a>
+
+        <div class="header-main__side header-main__side--right">
+          <nav class="header-nav header-nav--right" aria-label="Secondary">
+            <ul class="header-nav__list">
+              <li><a class="header-nav__link" href="#story">Our Story</a></li>
+              <li><a class="header-nav__link" href="#reservation">Contact</a></li>
+            </ul>
+          </nav>
+
+          <a class="btn-reserve" href="#reservation">Reserve a Table</a>
+
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+            <span class="nav-toggle__bars" aria-hidden="true"></span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="mobile-nav" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Site menu">
+      <button class="mobile-nav__close" type="button" aria-label="Close menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <nav class="mobile-nav__nav" aria-label="Mobile">
+        <ul class="mobile-nav__list">
+          <li><a class="mobile-nav__link" href="#menu">Menu</a></li>
+          <li><a class="mobile-nav__link" href="#signature">Signature</a></li>
+          <li><a class="mobile-nav__link" href="#story">Our Story</a></li>
+          <li><a class="mobile-nav__link" href="#reservation">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn-reserve btn-reserve--block mobile-nav__cta" href="#reservation">Reserve a Table</a>
+    </div>
+
+  </header>
+
+  <main id="main">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="home">
+      <div class="hero__media" aria-hidden="true">
+        <img
+          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&amp;fit=crop&amp;w=1920&amp;h=1080&amp;q=80"
+          alt=""
+          width="1920" height="1080"
+          fetchpriority="high" decoding="async">
+      </div>
+      <div class="hero__scrim" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <p class="eyebrow hero__eyebrow reveal">Wood-fired. Seasonal. Shared.</p>
+        <h1 class="hero__title reveal delay-1">Where Every Table Tells a <em>Story</em></h1>
+        <p class="hero__lede reveal delay-2">A small dining room, a charcoal grill and a menu that follows the market — mezze, handmade pasta and whole fish, served from noon until late.</p>
+        <span class="hero__line" aria-hidden="true"></span>
+        <div class="hero__actions reveal delay-3">
+          <a class="btn-solid btn-solid--cream" href="#menu">View the Menu</a>
+          <a class="btn-line btn-line--white" href="#reservation">Book a Table</a>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#menu" aria-label="Scroll to the menu">
+        <span class="hero__scroll-label">Scroll</span>
+        <span class="hero__scroll-line" aria-hidden="true"></span>
+      </a>
+    </section>
+
+    <!-- ================= QUICK RESERVE BAR (overlaps hero by 50px) ================= -->
+    <div class="reserve-bar-wrap">
+      <div class="container">
+        <form class="reserve-bar" id="quick-reserve" aria-label="Quick reservation">
+
+          <div class="field">
+            <label class="field__label" for="quick-date">Date</label>
+            <input class="field__control" type="date" id="quick-date" name="quick-date" required>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="quick-time">Time</label>
+            <select class="field__control" id="quick-time" name="quick-time">
+              <option value="12:00">12:00</option>
+              <option value="12:30">12:30</option>
+              <option value="13:00">13:00</option>
+              <option value="13:30">13:30</option>
+              <option value="14:00">14:00</option>
+              <option value="14:30">14:30</option>
+              <option value="15:00">15:00</option>
+              <option value="15:30">15:30</option>
+              <option value="16:00">16:00</option>
+              <option value="16:30">16:30</option>
+              <option value="17:00">17:00</option>
+              <option value="17:30">17:30</option>
+              <option value="18:00">18:00</option>
+              <option value="18:30">18:30</option>
+              <option value="19:00" selected>19:00</option>
+              <option value="19:30">19:30</option>
+              <option value="20:00">20:00</option>
+              <option value="20:30">20:30</option>
+              <option value="21:00">21:00</option>
+              <option value="21:30">21:30</option>
+              <option value="22:00">22:00</option>
+              <option value="22:30">22:30</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="quick-guests">Guests</label>
+            <select class="field__control" id="quick-guests" name="quick-guests">
+              <option value="1">1 guest</option>
+              <option value="2" selected>2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+              <option value="5">5 guests</option>
+              <option value="6">6 guests</option>
+              <option value="7">7 guests</option>
+              <option value="8">8 guests</option>
+              <option value="9">9+ guests</option>
+            </select>
+          </div>
+
+          <button class="btn-solid reserve-bar__submit" type="submit">Check Availability</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ================= MENU ================= -->
+    <section class="section menu-section" id="menu">
+      <div class="container">
+
+        <header class="menu-head reveal">
+          <p class="eyebrow menu-head__eyebrow">Our Menu</p>
+          <h2 class="menu-head__title">Taste of the Mediterranean</h2>
+          <span class="menu-head__divider" aria-hidden="true">
+            <svg viewBox="0 0 140 24" width="140" height="24" focusable="false">
+              <line x1="0"  y1="12" x2="52" y2="12" stroke="#B8934A" stroke-width="1"/>
+              <line x1="88" y1="12" x2="140" y2="12" stroke="#B8934A" stroke-width="1"/>
+              <path d="M60 12 Q 70 6, 80 12" fill="none" stroke="#3B4A2F" stroke-width="1"/>
+              <ellipse cx="63" cy="9"   rx="3.6" ry="1.9" transform="rotate(-28 63 9)"  fill="#3B4A2F"/>
+              <ellipse cx="70" cy="7.5" rx="3.6" ry="1.9" transform="rotate(-10 70 7.5)" fill="#3B4A2F"/>
+              <ellipse cx="77" cy="9"   rx="3.6" ry="1.9" transform="rotate(-22 77 9)"  fill="#3B4A2F"/>
+              <ellipse cx="66" cy="15"  rx="3.6" ry="1.9" transform="rotate(28 66 15)"  fill="#3B4A2F"/>
+              <ellipse cx="73" cy="16"  rx="3.6" ry="1.9" transform="rotate(20 73 16)"  fill="#3B4A2F"/>
+            </svg>
+          </span>
+        </header>
+
+        <div class="menu-toolbar reveal delay-1">
+
+          <div class="menu-tabs" role="tablist" aria-label="Menu categories" id="menu-tablist">
+            <button class="menu-tab is-active" type="button" role="tab"
+                    id="tab-starters" aria-controls="menu-panel" aria-selected="true"
+                    tabindex="0" data-category="starters">Starters</button>
+            <button class="menu-tab" type="button" role="tab"
+                    id="tab-mains" aria-controls="menu-panel" aria-selected="false"
+                    tabindex="-1" data-category="mains">Mains</button>
+            <button class="menu-tab" type="button" role="tab"
+                    id="tab-desserts" aria-controls="menu-panel" aria-selected="false"
+                    tabindex="-1" data-category="desserts">Desserts</button>
+            <button class="menu-tab" type="button" role="tab"
+                    id="tab-drinks" aria-controls="menu-panel" aria-selected="false"
+                    tabindex="-1" data-category="drinks">Drinks</button>
+            <span class="menu-tabs__indicator" aria-hidden="true"></span>
+          </div>
+
+          <div class="menu-filters" role="group" aria-label="Dietary filters">
+            <button class="filter-chip" type="button" data-diet="v"  aria-pressed="false">
+              <span class="filter-chip__code">V</span>
+              <span class="filter-chip__label">Vegetarian</span>
+            </button>
+            <button class="filter-chip" type="button" data-diet="vg" aria-pressed="false">
+              <span class="filter-chip__code">VG</span>
+              <span class="filter-chip__label">Vegan</span>
+            </button>
+            <button class="filter-chip" type="button" data-diet="gf" aria-pressed="false">
+              <span class="filter-chip__code">GF</span>
+              <span class="filter-chip__label">Gluten-free</span>
+            </button>
+          </div>
+
+        </div>
+
+        <p class="menu-count" id="menu-count" aria-live="polite" aria-atomic="true">Showing 5 dishes</p>
+
+        <div class="menu-panel" id="menu-panel" role="tabpanel"
+             aria-labelledby="tab-starters" tabindex="0">
+          <ul class="menu-list" id="menu-list"></ul>
+        </div>
+
+        <p class="menu-note">
+          <strong class="menu-note__strong">Please tell us about any allergies.</strong>
+          Sample menu for layout preview — dishes, descriptions and prices are placeholder content.
+          Prices in Pakistani rupees.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= MARQUEE BAND ================= -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__row">
+        <div class="marquee__group">
+          <span class="marquee__item">Wood-fired</span><span class="marquee__dot">&#10022;</span>
+          <span class="marquee__item">Seasonal</span><span class="marquee__dot">&#10022;</span>
+          <span class="marquee__item">Shared</span><span class="marquee__dot">&#10022;</span>
+          <span class="marquee__item">Mezze</span><span class="marquee__dot">&#10022;</span>
+          <span class="marquee__item">Whole fish</span><span class="marquee__dot">&#10022;</span>
+        </div>
+        <div class="marquee__group">
+          <span class="marquee__item">Wood-fired</span><span class="marquee__dot">&#10022;</span>
+          <span class="marquee__item">Seasonal</span><span class="marquee__dot">&#10022;</span>
+          <span class="marquee__item">Shared</span><span class="marquee__dot">&#10022;</span>
+          <span class="marquee__item">Mezze</span><span class="marquee__dot">&#10022;</span>
+          <span class="marquee__item">Whole fish</span><span class="marquee__dot">&#10022;</span>
+        </div>
+      </div>
+      <div class="marquee__row marquee__row--rev">
+        <div class="marquee__group">
+          <span class="marquee__item marquee__item--o">Charcoal-grilled</span><span class="marquee__dot">&#10022;</span>
+          <span class="marquee__item marquee__item--o">Handmade pasta</span><span class="marquee__dot">&#10022;</span>
+          <span class="marquee__item marquee__item--o">Olive wood</span><span class="marquee__dot">&#10022;</span>
+          <span class="marquee__item marquee__item--o">Candlelit room</span><span class="marquee__dot">&#10022;</span>
+        </div>
+        <div class="marquee__group">
+          <span class="marquee__item marquee__item--o">Charcoal-grilled</span><span class="marquee__dot">&#10022;</span>
+          <span class="marquee__item marquee__item--o">Handmade pasta</span><span class="marquee__dot">&#10022;</span>
+          <span class="marquee__item marquee__item--o">Olive wood</span><span class="marquee__dot">&#10022;</span>
+          <span class="marquee__item marquee__item--o">Candlelit room</span><span class="marquee__dot">&#10022;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= SIGNATURE ================= -->
+    <section class="section signature" id="signature">
+      <div class="container">
+
+        <header class="signature-head reveal">
+          <div>
+            <p class="eyebrow signature-head__eyebrow">Chef's Signatures</p>
+            <h2 class="signature-head__title">Three plates we never take off</h2>
+          </div>
+          <p class="signature-head__lede">They survive every seasonal rewrite because the regulars keep ordering them — usually before they have even sat down.</p>
+        </header>
+
+        <div class="signature__grid">
+
+          <article class="signature-card reveal">
+            <figure class="signature-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&amp;fit=crop&amp;w=900&amp;h=1200&amp;q=80"
+                alt="Hand-cut tagliatelle twirled on a dark plate with brown butter and crisp sage"
+                width="900" height="1200" loading="lazy" decoding="async">
+              <span class="signature-card__overlay" aria-hidden="true"></span>
+              <span class="signature-card__frame" aria-hidden="true"></span>
+            </figure>
+            <div class="signature-card__body">
+              <p class="signature-card__number" aria-hidden="true">01</p>
+              <h3 class="signature-card__name">Hand-cut tagliatelle</h3>
+              <p class="signature-card__desc">Rolled and cut each morning, finished in brown butter with crisp sage and a slow-cooked egg yolk.</p>
+              <div class="signature-card__foot">
+                <span class="signature-card__price">Rs. 1,850</span>
+                <a class="signature-card__cta" href="#reservation"
+                   aria-label="Taste the Hand-cut tagliatelle — go to reservations">
+                  <span>Taste it</span>
+                  <span class="signature-card__cta-arrow" aria-hidden="true">&#8594;</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="signature-card reveal delay-1">
+            <figure class="signature-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&amp;fit=crop&amp;w=900&amp;h=1200&amp;q=80"
+                alt="Whole grilled fish plated with charred lemon and fresh herbs"
+                width="900" height="1200" loading="lazy" decoding="async">
+              <span class="signature-card__overlay" aria-hidden="true"></span>
+              <span class="signature-card__frame" aria-hidden="true"></span>
+            </figure>
+            <div class="signature-card__body">
+              <p class="signature-card__number" aria-hidden="true">02</p>
+              <h3 class="signature-card__name">Whole fish over olive wood</h3>
+              <p class="signature-card__desc">Grilled whole on the bone, dressed with capers, parsley and the juice of a charred lemon.</p>
+              <div class="signature-card__foot">
+                <span class="signature-card__price">Rs. 4,200</span>
+                <a class="signature-card__cta" href="#reservation"
+                   aria-label="Taste the Whole fish over olive wood — go to reservations">
+                  <span>Taste it</span>
+                  <span class="signature-card__cta-arrow" aria-hidden="true">&#8594;</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="signature-card reveal delay-2">
+            <figure class="signature-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&amp;fit=crop&amp;w=900&amp;h=1200&amp;q=80"
+                alt="Pistachio and clotted cream dessert plated on a dark table"
+                width="900" height="1200" loading="lazy" decoding="async">
+              <span class="signature-card__overlay" aria-hidden="true"></span>
+              <span class="signature-card__frame" aria-hidden="true"></span>
+            </figure>
+            <div class="signature-card__body">
+              <p class="signature-card__number" aria-hidden="true">03</p>
+              <h3 class="signature-card__name">Pistachio &amp; clotted cream</h3>
+              <p class="signature-card__desc">Layered filo, ground pistachio and orange blossom syrup, served with cold clotted cream.</p>
+              <div class="signature-card__foot">
+                <span class="signature-card__price">Rs. 1,250</span>
+                <a class="signature-card__cta" href="#reservation"
+                   aria-label="Taste the Pistachio and clotted cream — go to reservations">
+                  <span>Taste it</span>
+                  <span class="signature-card__cta-arrow" aria-hidden="true">&#8594;</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STORY ================= -->
+    <section class="section story" id="story">
+      <div class="container">
+
+        <div class="story__grid">
+
+          <div class="story__media reveal reveal--left">
+            <figure class="story__arch">
+              <img
+                src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&amp;fit=crop&amp;w=1000&amp;h=1250&amp;q=80"
+                alt="Chef plating a dish at the pass in the Olive &amp; Ember kitchen"
+                width="1000" height="1250" loading="lazy" decoding="async">
+            </figure>
+            <figure class="story__inset">
+              <img
+                src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&amp;fit=crop&amp;w=800&amp;h=800&amp;q=80"
+                alt="Fresh herbs, olives and tomatoes arranged on a wooden board"
+                width="440" height="440" loading="lazy" decoding="async">
+            </figure>
+            <div class="story__badge" aria-hidden="true">
+              <svg class="story__badge-ring" viewBox="0 0 120 120" focusable="false">
+                <defs><path id="badge-circle" d="M60 60 m-43 0 a43 43 0 1 1 86 0 a43 43 0 1 1 -86 0"/></defs>
+                <text><textPath href="#badge-circle" startOffset="0" textLength="262" lengthAdjust="spacing">Wood-fired · Seasonal · Shared · </textPath></text>
+              </svg>
+              <svg class="story__badge-core" viewBox="0 0 44 22" width="34" height="17" fill="none" focusable="false">
+                <path d="M3 11 Q 22 4, 41 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+                <ellipse cx="12" cy="5.5" rx="3.6" ry="1.9" transform="rotate(-28 12 5.5)" fill="currentColor"/>
+                <ellipse cx="22" cy="5" rx="3.6" ry="1.9" transform="rotate(-10 22 5)" fill="currentColor"/>
+                <ellipse cx="32" cy="6" rx="3.6" ry="1.9" transform="rotate(-22 32 6)" fill="currentColor"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="story__body reveal reveal--right delay-1">
+            <p class="eyebrow">Our Story</p>
+            <h2 class="story__title">Cooked slowly, served generously</h2>
+
+            <p>Everything at Olive &amp; Ember comes off one long wood-fired oven and a charcoal grill. Fish arrives whole, vegetables come in from the market two streets over, and nothing is rushed — a whole fish cooks on the bone for twenty minutes before it reaches the table.</p>
+            <p>We cook what the season gives us. When tomatoes are at their best, they show up in three dishes. When they are not, they disappear from the menu without ceremony. And when we set the table, it is for sharing — plates go in the middle, everyone reaches across.</p>
+
+            <ul class="story__values">
+              <li class="story__value">
+                <span class="story__value-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 21c0-7 0-11 0-13"/>
+                    <path d="M12 8c-3 0-6-1.5-6-4.5 3 0 6 1.5 6 4.5z"/>
+                    <path d="M12 8c3 0 6-1.5 6-4.5-3 0-6 1.5-6 4.5z"/>
+                    <path d="M12 14c-2.5 0-5-1.2-5-3.5 2.5 0 5 1.2 5 3.5z"/>
+                    <path d="M12 14c2.5 0 5-1.2 5-3.5-2.5 0-5 1.2-5 3.5z"/>
+                  </svg>
+                </span>
+                <span class="story__value-text">
+                  <span class="story__value-title">Seasonal produce</span>
+                  <span class="story__value-note">The menu is rewritten twice a week around the market.</span>
+                </span>
+              </li>
+
+              <li class="story__value">
+                <span class="story__value-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 20h16"/>
+                    <path d="M6 20V9a6 6 0 0 1 12 0v11"/>
+                    <path d="M10 20v-5a2 2 0 0 1 4 0v5"/>
+                  </svg>
+                </span>
+                <span class="story__value-text">
+                  <span class="story__value-title">Wood-fired oven</span>
+                  <span class="story__value-note">One long oven, lit at 10am, hot through dinner service.</span>
+                </span>
+              </li>
+
+              <li class="story__value">
+                <span class="story__value-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="8"/>
+                    <circle cx="12" cy="12" r="3.5"/>
+                  </svg>
+                </span>
+                <span class="story__value-text">
+                  <span class="story__value-title">Family-style sharing</span>
+                  <span class="story__value-note">Large plates built for the middle of the table.</span>
+                </span>
+              </li>
+            </ul>
+
+            <p class="story__signature">The Olive &amp; Ember Kitchen</p>
+          </div>
+
+        </div>
+
+        <ul class="story__stats reveal">
+          <li class="stat">
+            <span class="stat__figure"><span class="stat__num" data-count="20">20</span><span class="stat__unit">min</span></span>
+            <span class="stat__label">A whole fish cooks on the bone</span>
+          </li>
+          <li class="stat">
+            <span class="stat__figure"><span class="stat__num" data-count="2">2</span><span class="stat__unit">&times;</span></span>
+            <span class="stat__label">Menu rewritten every week</span>
+          </li>
+          <li class="stat">
+            <span class="stat__figure"><span class="stat__num" data-count="10">10</span><span class="stat__unit">am</span></span>
+            <span class="stat__label">The oven is lit before service</span>
+          </li>
+          <li class="stat">
+            <span class="stat__figure"><span class="stat__num" data-count="3">3</span><span class="stat__unit">plates</span></span>
+            <span class="stat__label">We never take off the menu</span>
+          </li>
+        </ul>
+
+        <ul class="story__gallery reveal">
+          <li>
+            <button class="story__gallery-item story__gallery-item--1"
+                    type="button"
+                    data-lightbox-index="0"
+                    aria-label="Open image: dining room in the evening">
+              <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&amp;fit=crop&amp;w=800&amp;h=1000&amp;q=80"
+                   alt="Wide view of the restaurant dining room in the evening"
+                   width="800" height="1000" loading="lazy" decoding="async">
+            </button>
+          </li>
+
+          <li>
+            <button class="story__gallery-item story__gallery-item--2"
+                    type="button"
+                    data-lightbox-index="1"
+                    aria-label="Open image: table setting with wine glasses">
+              <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=900&amp;h=900&amp;q=80"
+                   alt="Table setting with wine glasses and folded linen napkins"
+                   width="900" height="900" loading="lazy" decoding="async">
+            </button>
+          </li>
+
+          <li>
+            <button class="story__gallery-item story__gallery-item--3"
+                    type="button"
+                    data-lightbox-index="2"
+                    aria-label="Open image: cocktail on the bar counter">
+              <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&amp;fit=crop&amp;w=800&amp;h=1200&amp;q=80"
+                   alt="Cocktail garnished with citrus resting on the bar counter"
+                   width="800" height="1200" loading="lazy" decoding="async">
+            </button>
+          </li>
+
+          <li>
+            <button class="story__gallery-item story__gallery-item--4"
+                    type="button"
+                    data-lightbox-index="3"
+                    aria-label="Open image: outdoor terrace set for dinner">
+              <img src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?auto=format&amp;fit=crop&amp;w=900&amp;h=900&amp;q=80"
+                   alt="Outdoor terrace tables set for dinner under warm lights"
+                   width="900" height="900" loading="lazy" decoding="async">
+            </button>
+          </li>
+        </ul>
+
+      </div>
+
+      <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+        <div class="lightbox__inner">
+          <button class="lightbox__close" type="button" aria-label="Close image viewer">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+
+          <button class="lightbox__arrow lightbox__arrow--prev" type="button" aria-label="Previous image">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M15 5 L 8 12 L 15 19"/>
+            </svg>
+          </button>
+
+          <figure class="lightbox__figure">
+            <img class="lightbox__img" src="" alt="" width="1200" height="800" decoding="async">
+            <figcaption class="lightbox__caption"></figcaption>
+            <p class="lightbox__counter" aria-hidden="true"></p>
+          </figure>
+
+          <button class="lightbox__arrow lightbox__arrow--next" type="button" aria-label="Next image">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M9 5 L 16 12 L 9 19"/>
+            </svg>
+          </button>
+        </div>
+      </dialog>
+    </section>
+
+    <!-- ================= RESERVATION ================= -->
+    <section class="section reservation" id="reservation">
+      <div class="container reservation__grid">
+
+        <div class="reservation__intro reveal reveal--left">
+          <p class="eyebrow eyebrow--light">Reservations</p>
+          <h2 class="reservation__title">Save your table</h2>
+          <p class="reservation__lede">We hold a handful of counter seats back for walk-ins, but the dining room fills early — especially Thursday through Saturday. Send us a note and we will confirm within the hour.</p>
+
+          <dl class="reservation__hours">
+            <div class="reservation__hours-row">
+              <dt>Mon – Thu</dt>
+              <dd>12:00 – 23:00</dd>
+            </div>
+            <div class="reservation__hours-row">
+              <dt>Fri – Sun</dt>
+              <dd>12:00 – 00:00</dd>
+            </div>
+          </dl>
+
+          <ul class="reservation__contact">
+            <li class="reservation__contact-item">
+              <span class="reservation__contact-label">Phone</span>
+              <a href="tel:+920000000000">+92 000 000 0000</a>
+            </li>
+            <li class="reservation__contact-item">
+              <span class="reservation__contact-label">Email</span>
+              <a href="mailto:hello@oliveandember.example">hello@oliveandember.example</a>
+            </li>
+            <li class="reservation__contact-item">
+              <span class="reservation__contact-label">Find us</span>
+              <span>14 Harbour Lane (sample address for this demo)</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="reservation__card reveal reveal--right delay-1">
+
+          <form class="reservation__form" id="reservation-form" novalidate>
+
+            <div class="reservation__summary" id="reservation-summary" role="alert" hidden></div>
+
+            <div class="form-grid">
+
+              <div class="field field--full">
+                <label class="field__label" for="res-name">Name</label>
+                <input class="field__control" type="text" id="res-name" name="name"
+                       autocomplete="name" required minlength="2"
+                       aria-describedby="res-name-error">
+                <p class="field__error" id="res-name-error" hidden></p>
+              </div>
+
+              <div class="field field--full">
+                <label class="field__label" for="res-phone">Phone</label>
+                <input class="field__control" type="tel" id="res-phone" name="phone"
+                       autocomplete="tel" inputmode="tel" placeholder="+92 300 000 0000"
+                       required aria-describedby="res-phone-error">
+                <p class="field__error" id="res-phone-error" hidden></p>
+              </div>
+
+              <div class="field field--full">
+                <label class="field__label" for="res-email">Email</label>
+                <input class="field__control" type="email" id="res-email" name="email"
+                       autocomplete="email" required aria-describedby="res-email-error">
+                <p class="field__error" id="res-email-error" hidden></p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="res-date">Date</label>
+                <input class="field__control" type="date" id="res-date" name="date"
+                       required aria-describedby="res-date-error">
+                <p class="field__error" id="res-date-error" hidden></p>
+              </div>
+
+              <div class="field">
+                <label class="field__label" for="res-time">Time</label>
+                <select class="field__control" id="res-time" name="time" required aria-describedby="res-time-error">
+                  <option value="">Choose a time</option>
+                  <option value="12:00">12:00</option>
+                  <option value="12:30">12:30</option>
+                  <option value="13:00">13:00</option>
+                  <option value="13:30">13:30</option>
+                  <option value="14:00">14:00</option>
+                  <option value="14:30">14:30</option>
+                  <option value="15:00">15:00</option>
+                  <option value="15:30">15:30</option>
+                  <option value="16:00">16:00</option>
+                  <option value="16:30">16:30</option>
+                  <option value="17:00">17:00</option>
+                  <option value="17:30">17:30</option>
+                  <option value="18:00">18:00</option>
+                  <option value="18:30">18:30</option>
+                  <option value="19:00">19:00</option>
+                  <option value="19:30">19:30</option>
+                  <option value="20:00">20:00</option>
+                  <option value="20:30">20:30</option>
+                  <option value="21:00">21:00</option>
+                  <option value="21:30">21:30</option>
+                  <option value="22:00">22:00</option>
+                  <option value="22:30">22:30</option>
+                </select>
+                <p class="field__error" id="res-time-error" hidden></p>
+              </div>
+
+              <div class="field field--full">
+                <label class="field__label" for="res-guests">Guests</label>
+                <select class="field__control" id="res-guests" name="guests" required aria-describedby="res-guests-error">
+                  <option value="">Choose party size</option>
+                  <option value="1">1 guest</option>
+                  <option value="2">2 guests</option>
+                  <option value="3">3 guests</option>
+                  <option value="4">4 guests</option>
+                  <option value="5">5 guests</option>
+                  <option value="6">6 guests</option>
+                  <option value="7">7 guests</option>
+                  <option value="8">8 guests</option>
+                  <option value="9">9+ guests</option>
+                </select>
+                <p class="field__error" id="res-guests-error" hidden></p>
+              </div>
+
+              <div class="field field--full">
+                <label class="field__label" for="res-notes">
+                  Notes <span class="field__optional">(optional)</span>
+                </label>
+                <textarea class="field__control" id="res-notes" name="notes" rows="3"
+                          placeholder="Allergies, a birthday, a quiet corner."></textarea>
+              </div>
+
+            </div>
+
+            <button class="btn-solid reservation__submit" type="submit">Request reservation</button>
+          </form>
+
+          <div class="reservation__success" id="reservation-success" hidden>
+            <svg class="reservation__check" viewBox="0 0 120 120" width="120" height="120" aria-hidden="true" focusable="false">
+              <circle class="reservation__check-ring" cx="60" cy="60" r="48"/>
+              <path class="reservation__check-tick" d="M40 60 L 54 76 L 82 40"/>
+              <path class="reservation__check-leaf reservation__check-leaf--l" d="M34 54 c -5 -3 -12 -1 -15 4 c 5 3 12 1 15 -4 Z"/>
+              <path class="reservation__check-leaf reservation__check-leaf--r" d="M34 54 c 5 -3 12 -1 15 4 c -5 3 -12 1 -15 -4 Z"/>
+            </svg>
+            <h3 class="reservation__success-title" tabindex="-1">Thank you — we will confirm shortly.</h3>
+            <p class="reservation__success-text">This is a demo form, so no real booking was made. In a live restaurant, a member of the team would reply within the hour to confirm your table.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+
+      <div class="footer-brand reveal">
+        <a class="footer-brand__logo" href="#home" aria-label="Olive &amp; Ember — back to top">
+          <svg class="footer-brand__branch" viewBox="0 0 44 22" width="38" height="19" fill="none" aria-hidden="true" focusable="false">
+            <path d="M3 11 Q 22 4, 41 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+            <ellipse cx="12" cy="5.5" rx="3.6" ry="1.9" transform="rotate(-28 12 5.5)" fill="currentColor"/>
+            <ellipse cx="22" cy="5"   rx="3.6" ry="1.9" transform="rotate(-10 22 5)"   fill="currentColor"/>
+            <ellipse cx="32" cy="6"   rx="3.6" ry="1.9" transform="rotate(-22 32 6)"   fill="currentColor"/>
+            <ellipse cx="17" cy="16"  rx="3.6" ry="1.9" transform="rotate(28 17 16)"   fill="currentColor"/>
+            <ellipse cx="27" cy="16.5" rx="3.6" ry="1.9" transform="rotate(20 27 16.5)" fill="currentColor"/>
+            <ellipse cx="37" cy="15"  rx="3.6" ry="1.9" transform="rotate(30 37 15)"   fill="currentColor"/>
+          </svg>
+          <span class="footer-brand__name">Olive &amp; Ember</span>
+          <span class="footer-brand__tag">Mediterranean Kitchen</span>
+        </a>
+        <span class="footer-brand__rule" aria-hidden="true"></span>
+      </div>
+
+      <div class="footer-grid">
+
+        <section class="footer-col reveal delay-1" aria-labelledby="footer-visit">
+          <h2 class="footer-col__title" id="footer-visit">Visit</h2>
+          <address class="footer-col__address">
+            14 Harbour Lane<br>
+            Sample District<br>
+            (Placeholder address)
+          </address>
+          <p class="footer-col__line">
+            <a class="footer-link" href="#reservation">Find us on the map</a>
+          </p>
+        </section>
+
+        <section class="footer-col reveal delay-2" aria-labelledby="footer-hours">
+          <h2 class="footer-col__title" id="footer-hours">Hours</h2>
+          <table class="footer-hours">
+            <tbody>
+              <tr><th scope="row">Mon – Thu</th><td>12:00 – 23:00</td></tr>
+              <tr><th scope="row">Fri – Sun</th><td>12:00 – 00:00</td></tr>
+              <tr><th scope="row">Kitchen closes</th><td>22:30</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section class="footer-col reveal delay-3" aria-labelledby="footer-contact">
+          <h2 class="footer-col__title" id="footer-contact">Contact</h2>
+          <p class="footer-col__line">
+            <a class="footer-link" href="tel:+920000000000">+92 000 000 0000</a>
+          </p>
+          <p class="footer-col__line">
+            <a class="footer-link" href="mailto:hello@oliveandember.example">hello@oliveandember.example</a>
+          </p>
+          <p class="footer-col__line">
+            <a class="footer-link" href="#reservation">Reservations</a>
+          </p>
+        </section>
+
+        <section class="footer-col reveal delay-4" aria-labelledby="footer-follow">
+          <h2 class="footer-col__title" id="footer-follow">Follow</h2>
+          <ul class="footer-follow">
+            <li><a class="footer-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a class="footer-link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a class="footer-link" href="#reservation">Leave a review (sample link)</a></li>
+          </ul>
+        </section>
+
+      </div>
+
+      <div class="footer-newsletter reveal">
+        <div class="footer-newsletter__intro">
+          <h2 class="footer-newsletter__title">Seasonal menu updates, no spam</h2>
+          <p class="footer-newsletter__note">One short email a season, plus a note when the menu changes. Unsubscribe in a click.</p>
+        </div>
+
+        <form class="newsletter" id="footer-newsletter" novalidate>
+          <label class="newsletter__label" for="newsletter-email">Email address</label>
+          <div class="newsletter__row">
+            <input class="newsletter__input" id="newsletter-email" name="email"
+                   type="email" autocomplete="email" required
+                   placeholder="you@example.com"
+                   aria-describedby="newsletter-message">
+            <button class="newsletter__button" type="submit" aria-label="Subscribe to menu updates">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                   stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"
+                   aria-hidden="true" focusable="false">
+                <path d="M4 12 H 20"/>
+                <path d="M13 5 L 20 12 L 13 19"/>
+              </svg>
+            </button>
+          </div>
+          <p class="newsletter__message" id="newsletter-message" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-bottom__copy">
+          © <span id="year">2026</span> Olive &amp; Ember — sample project for layout review.
+        </p>
+
+        <ul class="footer-bottom__legal">
+          <li><a class="footer-link" href="#reservation">Privacy</a></li>
+          <li aria-hidden="true" class="footer-bottom__sep">·</li>
+          <li><a class="footer-link" href="#reservation">Terms</a></li>
+        </ul>
+
+        <a class="footer-backtop" href="#home">
+          <span>Back to top</span>
+          <span class="footer-backtop__arrow" aria-hidden="true">&#8593;</span>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <a class="float-reserve" href="#reservation" aria-label="Reserve a table" tabindex="-1">
+    <span>Reserve a table</span>
+    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12 H 20"/><path d="M13 5 L 20 12 L 13 19"/></svg>
+  </a>
+
+  <script src="menu-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
